@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">sidebar.</div>
+        <div class="content">
+            <div class="bordered" id="gradebook">
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th class="left-sticky0 top-sticky zi3 bgwhite"><div>Name</div></th>
+                            <th class="left-sticky1 top-sticky zi3"><div style="width:80px">Final Score</div><span id="final-weight">100%</span></th>
+                            <th class="top-sticky">
+                                <div style="overflow:unset;"><span class="detil-act-info" onclick="alert('detil info like approval due dates etc..')">i</span>
+                                THEORY: Assignment<br>20%  <a href="#" class="toggle-details" onclick="return toggleDetails('asg', this)">Hide Details</a>
+                                <table class="data-table eval-asg-detil eval-asg-detil-header " style="margin-top:16px;">
+                                    <tr>
+                                        <td><div>Trivia <br><span>0%</span> <a href="#" onclick="alert('you can adjust this weight.'); return false" class="edit-weight"></a></div></td>
+                                        <td><div>Tugas 1 <br><span>7%</span> <a href="#" onclick="alert('you can adjust this weight.'); return false" class="edit-weight"></a></div></td>
+                                        <td><div>Group asg <br><span>12%</span> <a href="#" onclick="alert('you can adjust this weight.'); return false" class="edit-weight"></a></div></td>
+                                    </tr>
+                                </table>
+                                </div>
+                            </th>
+                            <th class="top-sticky">
+                                <div>
+                                    <span class="detil-act-info" onclick="alert('detil info like approval due dates etc..')">i</span>
+                                    THEORY: Mid Exam</div><span id="">20%</span> <a href="#" class="toggle-details" onclick="return toggleDetails('mid', this)">Hide Details</a>
+                                <table class="data-table eval-mid-detil eval-mid-detil-header " style="margin-top:16px;">
+                                    <tr>
+                                        <td><div>MP 1<br><span>10%</span></div></td>
+                                        <td><div>MP 2<br><span>10%</span></div></td>
+                                    </tr>
+                                </table>
+                                </div>
+                            </th>
+                            <th class="top-sticky">
+                                <div>
+                                    <span class="detil-act-info" onclick="alert('detil info like approval due dates etc..')">i</span>
+                                    THEORY: Final Exam</div><span id="">30%</span> <a href="#" class="toggle-details" onclick="return toggleDetails('fin', this)">Hide Details</a>
+                                <table class="data-table eval-fin-detil eval-fin-detil-header " style="margin-top:16px;">
+                                    <tr>
+                                        <td><div>Fin Exam <br><span>30%</span></div></td>
+                                        <!-- <td><div>-</div></td> -->
+                                    </tr>
+                                </table>
+                                </div>
+                            </th>
+                            <th class="top-sticky disabled"><div >
+                                <span class="detil-act-info" onclick="alert('detil info like approval due dates etc..')">i</span>
+                                LAB: Assignment</div><span id="">10%</span></th>
+                            <th class="top-sticky disabled"><div >
+                                <span class="detil-act-info" onclick="alert('detil info like approval due dates etc..')">i</span>
+                                LAB: Final Project</div><span id="">20%</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td class="left-sticky0 font12"><div class="foto"></div>Student 1</td>
+                            <td class="left-sticky1">Data</td>
+                            <td>
+                                <div class="eval-asg-weighted">12.5</div>
+                                <table class="data-table eval-asg-detil ">
+                                <tr>
+                                    <td><div>100</div></td>
+                                    <td><div>70</div></td>
+                                    <td><div>90</div></td>
+                                </tr>
+                                </table>
+                            </td>
+                            <td><div class="eval-mid-weighted">12.5</div>
+                                <table class="data-table eval-mid-detil ">
+                                <tr>
+                                    <td><div>100</div></td>
+                                </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <div class="eval-fin-weighted">12.5</div>
+                                <table class="data-table eval-fin-detil ">
+                                <tr>
+                                    <td><div>100</div></td>
+                                </tr>
+                                </table>
+                            </td>
+                            <td class="disabled">
+                                <div class="eval-fin-weighted disabled">12.5</div>
+                                <table class="data-table eval-fin-detil ">
+                                    <tr>
+                                        <td><div class="disabled">100</div></td>
+                                    </tr>
+                                    </table>
+                            </td>
+                            <td class="disabled">
+                                <div class="eval-fin-weighted disabled">12.5</div>
+                                <table class="data-table eval-fin-detil ">
+                                    <tr>
+                                        <td><div class="disabled">100</div></td>
+                                    </tr>
+                                    </table>
+                            </td>
+                        </tr> -->
+
+                        <tr>
+                            <td class="bottom-sticky left-sticky0 zi3 bgwhite">&nbsp;</td>
+                            <td class="bottom-sticky left-sticky1 zi3">&nbsp;</td>
+                            <td class="bottom-sticky"><button>APPROVE</button><br>Due date: 22 Jun 2023, 23:59 GMT+7</td>
+                            <!-- <td class="bottom-sticky font12"> &nbsp;</td> -->
+                            <td class="bottom-sticky font12"><button>Request Change</button><br><a href="#">View Request History</a></td>
+                            <td class="bottom-sticky font12"><button>Request Change</button><br><a href="#">View Request History</a></td>
+                            <!-- <td class="bottom-sticky font12"> &nbsp;</td> -->
+                            <td class="bottom-sticky">&nbsp;</td>
+                            <td class="bottom-sticky">&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="tmp"></div>
+    </div>
+    <script>
+        var isDetil = {
+            'asg' : true,
+            'mid' : true,
+            'fin' : true
+        }
+        var marks = {
+            1: 'Not submitted',
+            2: 'Need scoring',
+            3: 'Late'
+        }
+        var scores = [
+            
+            {
+                student: 'Budi',
+                assessmentActivities: [
+                    {
+                        label: 'asg',
+                        title: 'Theory: Assignment',
+                        weight: 0.2,
+                        items: [
+                            {
+                                weight: 0,
+                                title: 'Trivia',
+                                score: generateScore()
+                            },
+                            {
+                                weight: 0.08,
+                                title: 'Tugas 1',
+                                score: generateScore()
+                            },
+                            {
+                                weight: 0.12,
+                                title: 'Group asg',
+                                score: generateScore()
+                            }
+                        ]
+                    },
+                    {
+                        label: 'mid',
+                        title: 'Theory: mid exam',
+                        weight: 0.2,
+                        items: [
+                            {
+                                weight: 0.1,
+                                title: 'Multipaper 1',
+                                score: generateScore()
+                            },
+                            {
+                                weight: 0.1,
+                                title: 'Multipaper 2',
+                                score: generateScore()
+                            }
+                        ]
+                    },
+                    {
+                        label: 'fin',
+                        title: 'Theory: final exam',
+                        weight: 0.3,
+                        items: [
+                            {
+                                weight: 0.3,
+                                title: 'Final Exam',
+                                score: 0,
+                                mark: 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                student: 'Andi',
+                assessmentActivities: [
+                    {
+                        label: 'asg',
+                        title: 'Theory: Assignment',
+                        weight: 0.2,
+                        items: [
+                            {
+                                weight: 0,
+                                title: 'Trivia',
+                                score: 100
+                            },
+                            {
+                                weight: 0.08,
+                                title: 'Tugas 1',
+                                score: 100
+                            },
+                            {
+                                weight: 0.12,
+                                title: 'Group asg',
+                                score: 100
+                            }
+                        ]
+                    },
+                    {
+                        label: 'mid',
+                        title: 'Theory: mid exam',
+                        weight: 0.2,
+                        items: [
+                            {
+                                weight: 0.1,
+                                title: 'Multipaper 1',
+                                score: 100
+                            },
+                            {
+                                weight: 0.1,
+                                title: 'Multipaper 2',
+                                score: 100
+                            }
+                        ]
+                    },
+                    {
+                        label: 'fin',
+                        title: 'Theory: final exam',
+                        weight: 0.3,
+                        items: [
+                            {
+                                weight: 0.3,
+                                title: 'Final Exam',
+                                score: 100
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                student: 'Boy',
+                assessmentActivities: [
+                    {
+                        label: 'asg',
+                        title: 'Theory: Assignment',
+                        weight: 0.2,
+                        items: [
+                            {
+                                weight: 0,
+                                title: 'Trivia',
+                                score: generateScore()
+                            },
+                            {
+                                weight: 0.08,
+                                title: 'Tugas 1',
+                                score: generateScore(),
+                                mark: 3
+                            },
+                            {
+                                weight: 0.12,
+                                title: 'Group asg',
+                                score: 0,
+                                mark: 2
+                            }
+                        ]
+                    },
+                    {
+                        label: 'mid',
+                        title: 'Theory: mid exam',
+                        weight: 0.2,
+                        items: [
+                            {
+                                weight: 0.1,
+                                title: 'Multipaper 1',
+                                score: generateScore()
+                            },
+                            {
+                                weight: 0.1,
+                                title: 'Multipaper 2',
+                                score: generateScore()
+                            }
+                        ]
+                    },
+                    {
+                        label: 'fin',
+                        title: 'Theory: final exam',
+                        weight: 0.3,
+                        items: [
+                            {
+                                weight: 0.3,
+                                title: 'Final Exam',
+                                score: generateScore()
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                student: 'Cindy',
+                assessmentActivities: [
+                    {
+                        label: 'asg',
+                        title: 'Theory: Assignment',
+                        weight: 0.2,
+                        items: [
+                            {
+                                weight: 0,
+                                title: 'Trivia',
+                                score: 0,
+                                mark: 2
+                            },
+                            {
+                                weight: 0.08,
+                                title: 'Tugas 1',
+                                score: generateScore()
+                            },
+                            {
+                                weight: 0.12,
+                                title: 'Group asg',
+                                score: generateScore(),
+                                mark: 3
+                            }
+                        ]
+                    },
+                    {
+                        label: 'mid',
+                        title: 'Theory: mid exam',
+                        weight: 0.2,
+                        items: [
+                            {
+                                weight: 0.1,
+                                title: 'Multipaper 1',
+                                score: generateScore()
+                            },
+                            {
+                                weight: 0.1,
+                                title: 'Multipaper 2',
+                                score: generateScore()
+                            }
+                        ]
+                    },
+                    {
+                        label: 'fin',
+                        title: 'Theory: final exam',
+                        weight: 0.3,
+                        items: [
+                            {
+                                weight: 0.3,
+                                title: 'Final Exam',
+                                score: 0,
+                                mark: 2
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                student: 'Danela',
+                assessmentActivities: [
+                    {
+                        label: 'asg',
+                        title: 'Theory: Assignment',
+                        weight: 0.2,
+                        items: [
+                            {
+                                weight: 0,
+                                title: 'Trivia',
+                                score: generateScore()
+                            },
+                            {
+                                weight: 0.08,
+                                title: 'Tugas 1',
+                                score: generateScore()
+                            },
+                            {
+                                weight: 0.12,
+                                title: 'Group asg',
+                                score: generateScore()
+                            }
+                        ]
+                    },
+                    {
+                        label: 'mid',
+                        title: 'Theory: mid exam',
+                        weight: 0.2,
+                        items: [
+                            {
+                                weight: 0.1,
+                                title: 'Multipaper 1',
+                                score: generateScore()
+                            },
+                            {
+                                weight: 0.1,
+                                title: 'Multipaper 2',
+                                score: generateScore()
+                            }
+                        ]
+                    },
+                    {
+                        label: 'fin',
+                        title: 'Theory: final exam',
+                        weight: 0.3,
+                        items: [
+                            {
+                                weight: 0.3,
+                                title: 'Final Exam',
+                                score: generateScore()
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                student: 'Kristin',
+                assessmentActivities: [
+                    {
+                        label: 'asg',
+                        title: 'Theory: Assignment',
+                        weight: 0.2,
+                        items: [
+                            {
+                                weight: 0,
+                                title: 'Trivia',
+                                score: generateScore()
+                            },
+                            {
+                                weight: 0.08,
+                                title: 'Tugas 1',
+                                score: generateScore()
+                            },
+                            {
+                                weight: 0.12,
+                                title: 'Group asg',
+                                score: generateScore()
+                            }
+                        ]
+                    },
+                    {
+                        label: 'mid',
+                        title: 'Theory: mid exam',
+                        weight: 0.2,
+                        items: [
+                            {
+                                weight: 0.1,
+                                title: 'Multipaper 1',
+                                score: generateScore()
+                            },
+                            {
+                                weight: 0.1,
+                                title: 'Multipaper 2',
+                                score: generateScore()
+                            }
+                        ]
+                    },
+                    {
+                        label: 'fin',
+                        title: 'Theory: final exam',
+                        weight: 0.3,
+                        items: [
+                            {
+                                weight: 0.3,
+                                title: 'Final Exam',
+                                score: generateScore()
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                student: 'Helen',
+                assessmentActivities: [
+                    {
+                        label: 'asg',
+                        title: 'Theory: Assignment',
+                        weight: 0.2,
+                        items: [
+                            {
+                                weight: 0,
+                                title: 'Trivia',
+                                score: generateScore()
+                            },
+                            {
+                                weight: 0.08,
+                                title: 'Tugas 1',
+                                score: generateScore()
+                            },
+                            {
+                                weight: 0.12,
+                                title: 'Group asg',
+                                score: generateScore()
+                            }
+                        ]
+                    },
+                    {
+                        label: 'mid',
+                        title: 'Theory: mid exam',
+                        weight: 0.2,
+                        items: [
+                            {
+                                weight: 0.1,
+                                title: 'Multipaper 1',
+                                score: generateScore()
+                            },
+                            {
+                                weight: 0.1,
+                                title: 'Multipaper 2',
+                                score: generateScore()
+                            }
+                        ]
+                    },
+                    {
+                        label: 'fin',
+                        title: 'Theory: final exam',
+                        weight: 0.3,
+                        items: [
+                            {
+                                weight: 0.3,
+                                title: 'Final Exam',
+                                score: generateScore()
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                student: 'Hector',
+                assessmentActivities: [
+                    {
+                        label: 'asg',
+                        title: 'Theory: Assignment',
+                        weight: 0.2,
+                        items: [
+                            {
+                                weight: 0,
+                                title: 'Trivia',
+                                score: generateScore()
+                            },
+                            {
+                                weight: 0.08,
+                                title: 'Tugas 1',
+                                score: generateScore()
+                            },
+                            {
+                                weight: 0.12,
+                                title: 'Group asg',
+                                score: generateScore()
+                            }
+                        ]
+                    },
+                    {
+                        label: 'mid',
+                        title: 'Theory: mid exam',
+                        weight: 0.2,
+                        items: [
+                            {
+                                weight: 0.1,
+                                title: 'Multipaper 1',
+                                score: generateScore()
+                            },
+                            {
+                                weight: 0.1,
+                                title: 'Multipaper 2',
+                                score: generateScore()
+                            }
+                        ]
+                    },
+                    {
+                        label: 'fin',
+                        title: 'Theory: final exam',
+                        weight: 0.3,
+                        items: [
+                            {
+                                weight: 0.3,
+                                title: 'Final Exam',
+                                score: generateScore()
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                student: 'Garry',
+                assessmentActivities: [
+                    {
+                        label: 'asg',
+                        title: 'Theory: Assignment',
+                        weight: 0.2,
+                        items: [
+                            {
+                                weight: 0,
+                                title: 'Trivia',
+                                score: generateScore()
+                            },
+                            {
+                                weight: 0.08,
+                                title: 'Tugas 1',
+                                score: generateScore()
+                            },
+                            {
+                                weight: 0.12,
+                                title: 'Group asg',
+                                score: generateScore()
+                            }
+                        ]
+                    },
+                    {
+                        label: 'mid',
+                        title: 'Theory: mid exam',
+                        weight: 0.2,
+                        items: [
+                            {
+                                weight: 0.1,
+                                title: 'Multipaper 1',
+                                score: generateScore()
+                            },
+                            {
+                                weight: 0.1,
+                                title: 'Multipaper 2',
+                                score: generateScore()
+                            }
+                        ]
+                    },
+                    {
+                        label: 'fin',
+                        title: 'Theory: final exam',
+                        weight: 0.3,
+                        items: [
+                            {
+                                weight: 0.3,
+                                title: 'Final Exam',
+                                score: generateScore()
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+        function renderGradebook() {
+            const tmp = document.getElementById('tmp');
+            const table = document.getElementById('table').children[1];
+            var footerTable = table.children[0];
+
+            for(var i = 0; i < scores.length; i++) {         
+                var totalWeighted = 0, subTotal = 0;
+                var rowStr = `<table><tr>
+                        <td class="left-sticky0 font12 bgwhite"><div class="foto"></div>${scores[i].student}</td>
+                        <td class="left-sticky1">{totalWeighted} </td>
+                        `;
+
+                for (var j=0; j < 3; j++) {
+                    const asmtAct = scores[i].assessmentActivities[j];
+                    const label = asmtAct.label;
+                    var subTotalWeighted = 0;
+                    var weighted = 1;
+
+                    // rowStr +=
+                    //         `<td>
+                    //             <div class="eval-${label}-weighted hide">{subTotal} 
+                    //                 <span class="weighted" title="Score by weight: ${asmtAct.weight*100}% of {subTotal}">
+                    //                 ({subTotalWeighted})</span>
+                    //                 <small class="info">{info}</small>
+                    //                 </div>
+                    //             <table class="data-table eval-${label}-detil ">
+                    //             <tr>
+                    //         `;
+                    
+                    rowStr +=
+                            `<td>
+                                <div class="eval-${label}-weighted hide" onclick="alert('muncul change score')" style="cursor:pointer">{subTotalWeighted} 
+                                    
+                                    <small class="info">{info}</small>
+                                    </div>
+                                <table class="data-table eval-${label}-detil ">
+                                <tr>
+                            `;
+
+                    for (var k = 0; k < asmtAct.items.length; k++) {
+
+                        var item = asmtAct.items[k];
+                        var mark = '';
+
+                        if (item.mark && item.weight > 0) {
+                            mark = `<small class="info"><span class="mark${item.mark}">&bull;</span> ${marks[item.mark]}</small>`;
+                            if (item.mark == 2) {
+                                rowStr = rowStr.replace('{info}', mark);
+                            }
+                        }
+
+                        var unused = item.weight == 0 ? 'class="unused"' : '';
+                        rowStr += `<td><div onclick="alert('muncul change score')" style="cursor:pointer" ${unused}>
+                            ${item.score} 
+                            <span class="weighted" title="Score by weight: ${item.weight*100}% of ${item.score}">(${Math.round(item.score * item.weight)})</span>
+                            ${mark}
+                            </div></td>`;
+                        subTotalWeighted += item.weight * item.score;
+                    }
+
+                    rowStr += `
+                                </tr>
+                                </table>
+                                </td>`;     
+
+                    subTotalWeighted = Math.round(subTotalWeighted);
+                    totalWeighted += subTotalWeighted;
+
+                    subTotal = Math.floor(subTotalWeighted / asmtAct.weight);
+
+                    rowStr = rowStr.replace('{subTotalWeighted}', subTotalWeighted);
+                    rowStr = rowStr.replace(/{subTotal}/gi, subTotal);
+
+                    if (subTotal == 0) {
+                        rowStr = rowStr.replace('{info}', '<small class="info"><span class="mark1">&bull;</span> Not submitted</small>');
+                    } else {
+                        rowStr = rowStr.replace('{info}', '');
+                    }
+                    
+                }
+                
+                rowStr += `
+                        <td class="disabled">
+                            <div class="eval-lab-weighted disabled hide">100 <span class="weighted">(10)</span></div>
+                            <table class="data-table eval-lab-detil ">
+                                <tr>
+                                    <td><div class="disabled">100 <span class="weighted">(10)</span></div></td>
+                                </tr>
+                                </table>
+                        </td>
+                        <td class="disabled">
+                            <div class="eval-lab-weighted disabled hide">100 <span class="weighted">(20)</span></div>
+                            <table class="data-table eval-lab-detil ">
+                                <tr>
+                                    <td><div class="disabled">100 <span class="weighted">(20)</span></div></td>
+                                </tr>
+                                </table>
+                        </td>
+                    </tr>
+                    </table>`;
+                    
+                totalWeighted += 30; // lab full score
+
+                var grade = 'E';
+                if (totalWeighted >= 90) 
+                    grade = 'A';
+                else if (totalWeighted >= 85)
+                    grade = 'A-';
+                else if (totalWeighted >= 80) 
+                    grade = 'B+';
+                else if (totalWeighted >= 75)
+                    grade = 'B';
+                else if (totalWeighted >= 70)
+                    grade = 'B-';
+                else if (totalWeighted >= 65)
+                    grade = 'C';
+
+                totalWeighted = Math.ceil(totalWeighted) + '<br><small style="color:#666666;font-size:10px">Grade '+ grade +'</small>';
+
+                rowStr = rowStr.replace('{totalWeighted}', totalWeighted);
+
+                tmp.innerHTML = rowStr;
+                const el = tmp.children[0].children[0].children[0]; // get the row
+                table.append(el);
+            }
+            table.append(footerTable);
+
+        } 
+        renderGradebook();
+        function toggleDetails(act, link) {
+            const activityDetil = '.eval-'+act+'-detil';
+            const activityWeighted = '.eval-'+act+'-weighted';
+
+            document.querySelectorAll(activityDetil).forEach((element) => {
+                if (isDetil[act]) {
+                    element.classList.add('hide');
+                } else {
+                    element.classList.remove('hide');
+                }
+            });
+            document.querySelectorAll(activityWeighted).forEach((element) => {
+                if (isDetil[act]) {
+                    element.classList.remove('hide');
+                } else     {
+                    element.classList.add('hide');
+                }
+            });
+            link.innerText = isDetil[act] ? 'Show Details' : 'Hide Details';
+            isDetil[act] = !isDetil[act];
+            return false;
+        }
+        function generateScore() {
+            return Math.round(Math.random()*50) + 50;
+        }
+
+    </script>
+</body>
+</html>
