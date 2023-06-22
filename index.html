@@ -148,6 +148,7 @@
                             {
                                 weight: 0,
                                 title: 'Trivia',
+                                type: 'objective',
                                 score: generateScore()
                             },
                             {
@@ -205,6 +206,7 @@
                             {
                                 weight: 0,
                                 title: 'Trivia',
+                                type: 'objective',
                                 score: 100
                             },
                             {
@@ -261,6 +263,7 @@
                             {
                                 weight: 0,
                                 title: 'Trivia',
+                                type: 'objective',
                                 score: generateScore()
                             },
                             {
@@ -319,6 +322,7 @@
                             {
                                 weight: 0,
                                 title: 'Trivia',
+                                type: 'objective',
                                 score: 0,
                                 mark: 2
                             },
@@ -378,6 +382,7 @@
                             {
                                 weight: 0,
                                 title: 'Trivia',
+                                type: 'objective',
                                 score: generateScore()
                             },
                             {
@@ -434,6 +439,7 @@
                             {
                                 weight: 0,
                                 title: 'Trivia',
+                                type: 'objective',
                                 score: generateScore()
                             },
                             {
@@ -490,6 +496,7 @@
                             {
                                 weight: 0,
                                 title: 'Trivia',
+                                type: 'objective',
                                 score: generateScore()
                             },
                             {
@@ -546,6 +553,7 @@
                             {
                                 weight: 0,
                                 title: 'Trivia',
+                                type: 'objective',
                                 score: generateScore()
                             },
                             {
@@ -602,6 +610,7 @@
                             {
                                 weight: 0,
                                 title: 'Trivia',
+                                type: 'objective',
                                 score: generateScore()
                             },
                             {
@@ -648,6 +657,7 @@
                 ]
             }
         ]
+        
         function renderGradebook() {
             const tmp = document.getElementById('tmp');
             const table = document.getElementById('table').children[1];
@@ -700,7 +710,13 @@
                         }
 
                         var unused = item.weight == 0 ? 'class="unused"' : '';
-                        rowStr += `<td><div onclick="alert('muncul change score')" style="cursor:pointer" ${unused}>
+                        
+                        if (item.type == undefined)
+                            rowStr += `<td><div onclick="alert('muncul change score')" style="cursor:pointer" ${unused}>`;
+                        else
+                            rowStr += `<td><div onclick="alert('cannot change score because this assessment is autoscore by system.')" style="cursor:not-allowed" ${unused}>`;
+
+                        rowStr += `
                             ${item.score} 
                             <span class="weighted" title="Score by weight: ${item.weight*100}% of ${item.score}">(${Math.round(item.score * item.weight)})</span>
                             ${mark}
