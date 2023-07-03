@@ -3,7 +3,7 @@
     margin:0 auto;
 }
 body {
-    margin:0;
+    margin: 0;
     font-family: 'Open Sans';
     font-size: 14px;
 }
@@ -252,13 +252,18 @@ button {
     background-color: rgba(0,0,0,.5);
     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
 }
-.detil-act-info {
+.detil-act-info, .aol {
     background: #999;
     color: #fff;
-    display:block;
-    float:right;
+    display:inline-block;
+    margin-left:16px;
     width: 20px;
     text-align: center;
     border-radius: 100%;
     cursor:pointer;
+}
+.aol {
+    background: orange;
+    margin-left:0;
+    display:block;
 }
