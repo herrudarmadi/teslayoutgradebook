@@ -48,12 +48,14 @@ body {
     bottom: 0;
     background-color: #fff;
     z-index: 1;
+    outline: 1px solid #ddd;
 }
 .left-sticky0, .left-sticky1 {
     position: sticky;
     left: 0;
     background-color: #fff;
     z-index: 1;
+    outline: 1px solid #ddd;
 }
 .left-sticky1 {
     left: 228px;
@@ -80,14 +82,14 @@ tr:hover .top-sticky, tr:hover .left-sticky0, tr:hover .left-sticky1 {
 #table td,
 th, td {
     /* border: 1px solid #ddd; */
-    outline: 1px solid #ddd;
+    /* outline: 1px solid #ddd; */
     padding: 16px;
 }
 #table > tbody td, 
 #table > thead th {
     width: 195px;
     text-align: left;
-    outline:1px solid #ddd;
+    /* outline:1px solid #ddd; */
     vertical-align: top;
 }
 #table > thead th {
@@ -124,8 +126,14 @@ th table {
 } */
 
 .data-table {
-    margin: -17px -18px -18px;
+    margin: -17px -16px -16px -15px;
+    border-collapse: collapse;
     /* table-layout: fixed; */
+}
+.data-table td {
+    border-bottom: 0 !important;
+    border: 1px solid #ddd;
+    border-left: 0;
 }
 .data-table td, .data-table td div {
     min-width: 80px !important;
