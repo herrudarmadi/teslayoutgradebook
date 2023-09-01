@@ -173,6 +173,7 @@ td div {
     padding: 16px;
     margin: -17px;
     height: 40px;
+    width:100%;
 }
 .eval-asg-detil-header,
 .eval-mid-detil-header,
