@@ -168,7 +168,11 @@ td div {
 .eval-fin-weighted, .eval-fin-detil
 {
     font-size: 16px;
-    transition: all 1s;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 16px;
+    margin: -17px;
+    height: 40px;
 }
 .eval-asg-detil-header,
 .eval-mid-detil-header,
