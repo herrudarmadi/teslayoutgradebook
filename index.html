@@ -17,50 +17,52 @@
                 <table id="table">
                     <thead>
                         <tr>
-                            <th class="left-sticky0 top-sticky zi3 bgwhite"><div>Name</div></th>
-                            <th class="left-sticky1 top-sticky zi3"><div style="width:80px">Final Score</div><span id="final-weight">100%</span></th>
+                            <th class="left-sticky0 top-sticky zi3 bgwhite"><div class="p16">Name</div></th>
+                            <th class="left-sticky1 top-sticky zi3"><div class="p16" style="width:80px">Final Score<br><span id="final-weight">100%</span></div></th>
                             <th class="top-sticky">
-                                <div style="overflow:unset;">
+                                <div style="overflow:unset;" class="p16">
                                 &nbsp;<br />THEORY: Assignment <span class="detil-act-info" onclick="alert('detil info like approval due dates etc..')">i</span><br>20%  <a href="#" class="toggle-details" onclick="return toggleDetails('asg', this)">Hide Details</a>
-                                <table class="data-table eval-asg-detil eval-asg-detil-header " style="margin-top:16px;">
+                                </div>
+                                <table class="data-table eval-asg-detil eval-asg-detil-header ">
                                     <tr>
                                         <td><div>Trivia <br><span>0%</span> <a href="#" onclick="alert('you can adjust this weight.'); return false" class="edit-weight"></a></div></td>
                                         <td><div>Tugas 1 <br><span>8%</span> <a href="#" onclick="alert('you can adjust this weight.'); return false" class="edit-weight"></a></div></td>
                                         <td><div>Group asg <br><span>12%</span> <a href="#" onclick="alert('you can adjust this weight.'); return false" class="edit-weight"></a></div></td>
                                     </tr>
                                 </table>
-                                </div>
                             </th>
                             <th class="top-sticky">
-                                <div>
-                                    
-                                    THEORY: Mid Exam <span class="detil-act-info" onclick="alert('detil info like approval due dates etc..')">i</span></div><span id="">20%</span> <a href="#" class="toggle-details" onclick="return toggleDetails('mid', this)">Hide Details</a>
-                                <table class="data-table eval-mid-detil eval-mid-detil-header " style="margin-top:16px;">
+                                <div class="p16">
+                                    THEORY: Mid Exam <span class="detil-act-info" onclick="alert('detil info like approval due dates etc..')">i</span><br>20% <a href="#" class="toggle-details" onclick="return toggleDetails('mid', this)">Hide Details</a>
+                                </div>    
+                                <table class="data-table eval-mid-detil eval-mid-detil-header ">
                                     <tr>
-                                        <td><div>MP 1<br><span>10%</span></div></td>
-                                        <td><div>MP 2<br><span>10%</span></div></td>
+                                        <td><div>Mid Exam<br><span>10%</span></div></td>
                                     </tr>
                                 </table>
                                 </div>
                             </th>
                             <th class="top-sticky">
-                                <div>
+                                <div class="p16">
                                     <span class="aol" title="Assessment of learning">A</span>
-                                    THEORY: Final Exam <span class="detil-act-info" onclick="alert('detil info like approval due dates etc..')">i</span></div><span id="">30%</span> <a href="#" class="toggle-details" onclick="return toggleDetails('fin', this)">Hide Details</a>
-                                <table class="data-table eval-fin-detil eval-fin-detil-header " style="margin-top:16px;">
+                                    THEORY: Final Exam <span class="detil-act-info" onclick="alert('detil info like approval due dates etc..')">i</span><br>30% <a href="#" class="toggle-details" onclick="return toggleDetails('fin', this)">Hide Details</a>
+                                </div>
+                                <table class="data-table eval-fin-detil eval-fin-detil-header ">
                                     <tr>
                                         <td><div>Fin Exam <br><span>30%</span></div></td>
-                                        <!-- <td><div>-</div></td> -->
+                                        <td><div>Make Up Fin Exam <br><span>30%</span></div></td>
                                     </tr>
                                 </table>
                                 </div>
                             </th>
-                            <th class="top-sticky disabled"><div >
+                            <th class="top-sticky disabled"><div class="p16">
                                 LAB: Assignment <span class="detil-act-info" onclick="alert('detil info like approval due dates etc..')">i</span>
-                                </div><span id="">10%</span></th>
-                            <th class="top-sticky disabled"><div >
+                                <br>10%
+                                </div></th>
+                            <th class="top-sticky disabled"><div class="p16">
                                 LAB: Final Project <span class="detil-act-info" onclick="alert('detil info like approval due dates etc..')">i</span>
-                                </div><span id="">20%</span></th>
+                                <br>20%
+                                </div></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -113,10 +115,14 @@
                         <tr>
                             <td class="bottom-sticky left-sticky0 zi3 bgwhite">&nbsp;</td>
                             <td class="bottom-sticky left-sticky1 zi3">&nbsp;</td>
-                            <td class="bottom-sticky"><button onclick="alert('will input OTP')">APPROVE</button><br>Due date: 22 Jun 2023, 23:59 GMT+7</td>
+                            <td class="bottom-sticky">
+                                <div class="p16 w100pct">
+                                <button onclick="alert('will input OTP')">APPROVE</button><br>Due date: <br>22 Jun 2023, 23:59 GMT+7
+                                </div>
+                            </td>
                             <!-- <td class="bottom-sticky font12"> &nbsp;</td> -->
-                            <td class="bottom-sticky font12"><button onclick="alert('will show request change form')">Request Change</button><br><a href="#">View Request History</a></td>
-                            <td class="bottom-sticky font12"><button onclick="alert('will show request change form')">Request Change</button><br><a href="#">View Request History</a></td>
+                            <td class="bottom-sticky font12"><div class="p16 w100pct"><button onclick="alert('will show request change form')">Request Change</button><br><a href="#">View Request History</a></div></td>
+                            <td class="bottom-sticky font12"><div class="p16 w100pct"><button onclick="alert('will show request change form')">Request Change</button><br><a href="#">View Request History</a></div></td>
                             <!-- <td class="bottom-sticky font12"> &nbsp;</td> -->
                             <td class="bottom-sticky">&nbsp;</td>
                             <td class="bottom-sticky">&nbsp;</td>
@@ -136,7 +142,8 @@
         var marks = {
             1: 'Not submitted',
             2: 'Need scoring',
-            3: 'Late'
+            3: 'Late',
+            4: 'Not eligible'
         }
         var scores = [
             
@@ -172,13 +179,8 @@
                         weight: 0.2,
                         items: [
                             {
-                                weight: 0.1,
-                                title: 'Multipaper 1',
-                                score: generateScore()
-                            },
-                            {
-                                weight: 0.1,
-                                title: 'Multipaper 2',
+                                weight: 0.2,
+                                title: 'Mid Exam',
                                 score: generateScore()
                             }
                         ]
@@ -193,6 +195,12 @@
                                 title: 'Final Exam',
                                 score: 0,
                                 mark: 1
+                            },
+                            {
+                                weight: 0.3,
+                                title: 'Make Up Final Exam',
+                                score: null,
+                                substituteFor: 0
                             }
                         ]
                     }
@@ -210,17 +218,17 @@
                                 weight: 0,
                                 title: 'Trivia',
                                 type: 'objective',
-                                score: 100
+                                score: 0
                             },
                             {
                                 weight: 0.08,
                                 title: 'Tugas 1',
-                                score: 100
+                                score: 0
                             },
                             {
                                 weight: 0.12,
                                 title: 'Group asg',
-                                score: 100
+                                score: 70
                             }
                         ]
                     },
@@ -230,13 +238,8 @@
                         weight: 0.2,
                         items: [
                             {
-                                weight: 0.1,
-                                title: 'Multipaper 1',
-                                score: 100
-                            },
-                            {
-                                weight: 0.1,
-                                title: 'Multipaper 2',
+                                weight: 0.2,
+                                title: 'Mid Exam',
                                 score: 100
                             }
                         ]
@@ -249,7 +252,14 @@
                             {
                                 weight: 0.3,
                                 title: 'Final Exam',
-                                score: 100
+                                score: 0,
+                                mark: 1
+                            },
+                            {
+                                weight: 0.3,
+                                title: 'Make Up Final Exam',
+                                score: 80,
+                                substituteFor: 0
                             }
                         ]
                     }
@@ -289,13 +299,8 @@
                         weight: 0.2,
                         items: [
                             {
-                                weight: 0.1,
-                                title: 'Multipaper 1',
-                                score: generateScore()
-                            },
-                            {
-                                weight: 0.1,
-                                title: 'Multipaper 2',
+                                weight: 0.2,
+                                title: 'Mid Exam',
                                 score: generateScore()
                             }
                         ]
@@ -308,7 +313,13 @@
                             {
                                 weight: 0.3,
                                 title: 'Final Exam',
-                                score: generateScore()
+                                score: generateScore(),
+                            },
+                            {
+                                weight: 0.3,
+                                title: 'Make Up Final Exam',
+                                score: null,
+                                substituteFor: 0
                             }
                         ]
                     }
@@ -348,13 +359,8 @@
                         weight: 0.2,
                         items: [
                             {
-                                weight: 0.1,
-                                title: 'Multipaper 1',
-                                score: generateScore()
-                            },
-                            {
-                                weight: 0.1,
-                                title: 'Multipaper 2',
+                                weight: 0.2,
+                                title: 'Mid Exam',
                                 score: generateScore()
                             }
                         ]
@@ -368,6 +374,13 @@
                                 weight: 0.3,
                                 title: 'Final Exam',
                                 score: 0,
+                                mark: 1
+                            },
+                            {
+                                weight: 0.3,
+                                title: 'Make Up Final Exam',
+                                score: 0,
+                                substituteFor: 0,
                                 mark: 2
                             }
                         ]
@@ -406,13 +419,8 @@
                         weight: 0.2,
                         items: [
                             {
-                                weight: 0.1,
-                                title: 'Multipaper 1',
-                                score: generateScore()
-                            },
-                            {
-                                weight: 0.1,
-                                title: 'Multipaper 2',
+                                weight: 0.2,
+                                title: 'Mid Exam',
                                 score: generateScore()
                             }
                         ]
@@ -425,7 +433,14 @@
                             {
                                 weight: 0.3,
                                 title: 'Final Exam',
-                                score: generateScore()
+                                score: 0,
+                                mark: 1
+                            },
+                            {
+                                weight: 0.3,
+                                title: 'Make Up Final Exam',
+                                score: null,
+                                substituteFor: 0
                             }
                         ]
                     }
@@ -463,13 +478,8 @@
                         weight: 0.2,
                         items: [
                             {
-                                weight: 0.1,
-                                title: 'Multipaper 1',
-                                score: generateScore()
-                            },
-                            {
-                                weight: 0.1,
-                                title: 'Multipaper 2',
+                                weight: 0.2,
+                                title: 'Mid Exam',
                                 score: generateScore()
                             }
                         ]
@@ -482,7 +492,13 @@
                             {
                                 weight: 0.3,
                                 title: 'Final Exam',
-                                score: generateScore()
+                                score: generateScore(),
+                            },
+                            {
+                                weight: 0.3,
+                                title: 'Make Up Final Exam',
+                                score: null,
+                                substituteFor: 0
                             }
                         ]
                     }
@@ -520,13 +536,8 @@
                         weight: 0.2,
                         items: [
                             {
-                                weight: 0.1,
-                                title: 'Multipaper 1',
-                                score: generateScore()
-                            },
-                            {
-                                weight: 0.1,
-                                title: 'Multipaper 2',
+                                weight: 0.2,
+                                title: 'Mid Exam',
                                 score: generateScore()
                             }
                         ]
@@ -539,7 +550,13 @@
                             {
                                 weight: 0.3,
                                 title: 'Final Exam',
-                                score: generateScore()
+                                score: generateScore(),
+                            },
+                            {
+                                weight: 0.3,
+                                title: 'Make Up Final Exam',
+                                score: null,
+                                substituteFor: 0
                             }
                         ]
                     }
@@ -577,13 +594,8 @@
                         weight: 0.2,
                         items: [
                             {
-                                weight: 0.1,
-                                title: 'Multipaper 1',
-                                score: generateScore()
-                            },
-                            {
-                                weight: 0.1,
-                                title: 'Multipaper 2',
+                                weight: 0.2,
+                                title: 'Mid Exam',
                                 score: generateScore()
                             }
                         ]
@@ -596,7 +608,13 @@
                             {
                                 weight: 0.3,
                                 title: 'Final Exam',
-                                score: generateScore()
+                                score: generateScore(),
+                            },
+                            {
+                                weight: 0.3,
+                                title: 'Make Up Final Exam',
+                                score: null,
+                                substituteFor: 0
                             }
                         ]
                     }
@@ -634,13 +652,8 @@
                         weight: 0.2,
                         items: [
                             {
-                                weight: 0.1,
-                                title: 'Multipaper 1',
-                                score: generateScore()
-                            },
-                            {
-                                weight: 0.1,
-                                title: 'Multipaper 2',
+                                weight: 0.2,
+                                title: 'Mid Exam',
                                 score: generateScore()
                             }
                         ]
@@ -653,7 +666,13 @@
                             {
                                 weight: 0.3,
                                 title: 'Final Exam',
-                                score: generateScore()
+                                score: generateScore(),
+                            },
+                            {
+                                weight: 0.3,
+                                title: 'Make Up Final Exam',
+                                score: null,
+                                substituteFor: 0
                             }
                         ]
                     }
@@ -669,8 +688,8 @@
             for(var i = 0; i < scores.length; i++) {         
                 var totalWeighted = 0, subTotal = 0;
                 var rowStr = `<table><tr>
-                        <td class="left-sticky0 font12 bgwhite"><div class="foto"></div>${scores[i].student}</td>
-                        <td class="left-sticky1">{totalWeighted} </td>
+                        <td class="left-sticky0 font12 bgwhite"><div class="p16 w100pct"><div class="foto"></div>${scores[i].student}</div></td>
+                        <td class="left-sticky1"><div class="p16">{totalWeighted}</div></td>
                         `;
 
                 for (var j=0; j < 3; j++) {
@@ -719,12 +738,26 @@
                         else
                             rowStr += `<td><div onclick="alert('cannot change score because this assessment is autoscore by system.')" style="cursor:not-allowed" ${unused}>`;
 
+                        var scoreStr = 0, 
+                            scoreWeighted = 0,
+                            scoreWeightedStr = '';
+                        if (item.score === null) {
+                            scoreStr = '-';
+                            scoreWeighted = 0;
+                            scoreWeightedStr = '';
+                        } else {
+                            scoreStr = item.score;
+                            // scoreWeighted = Math.round(item.score * item.weight);
+                            scoreWeighted = item.score * item.weight;
+                            scoreWeightedStr = '('+ (Math.floor((item.score * item.weight) * 100) / 100) +')';
+                        }
                         rowStr += `
-                            ${item.score} 
-                            <span class="weighted" title="Score by weight: ${item.weight*100}% of ${item.score}">(${Math.round(item.score * item.weight)})</span>
+                            ${scoreStr} 
+                            <span class="weighted" title="Score by weight: ${item.weight*100}% of ${scoreStr}">${scoreWeightedStr}</span>
                             ${mark}
                             </div></td>`;
-                        subTotalWeighted += item.weight * item.score;
+
+                        subTotalWeighted += scoreWeighted;
                     }
 
                     rowStr += `

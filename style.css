@@ -24,7 +24,7 @@ body {
 .bordered {
     border: 1px solid #D9D9D9;
     border-radius: 6px;
-    max-height: 631px;
+    max-height: 608px;
     overflow:auto;
     background-color: #fff;
     position: relative;
@@ -83,11 +83,11 @@ tr:hover .top-sticky, tr:hover .left-sticky0, tr:hover .left-sticky1 {
 th, td {
     /* border: 1px solid #ddd; */
     /* outline: 1px solid #ddd; */
-    padding: 16px;
+    padding: 0;
 }
 #table > tbody td, 
 #table > thead th {
-    width: 195px;
+    /* width: 195px; */
     text-align: left;
     /* outline:1px solid #ddd; */
     vertical-align: top;
@@ -126,14 +126,19 @@ th table {
 } */
 
 .data-table {
-    margin: -17px -16px -16px -15px;
+    /* margin: -17px -16px -16px -15px; */
     border-collapse: collapse;
+    /* margin-bottom: 0px; */
+    /* border-spacing: 0; */
     /* table-layout: fixed; */
 }
 .data-table td {
-    border-bottom: 0 !important;
+    border-top: 0 !important;
     border: 1px solid #ddd;
     border-left: 0;
+    /* outline: 1px solid #ddd; */
+    padding: 12px 16px !important;
+    box-sizing: border-box;
 }
 .data-table td, .data-table td div {
     min-width: 80px !important;
@@ -165,21 +170,33 @@ td div {
 }
 .eval-asg-weighted, .eval-asg-detil,
 .eval-mid-weighted, .eval-mid-detil,
-.eval-fin-weighted, .eval-fin-detil
+.eval-fin-weighted, .eval-fin-detil,
+.eval-lab-detil
 {
     font-size: 16px;
-    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
     border-right: 1px solid #ddd;
-    padding: 16px;
-    margin: -17px;
-    height: 40px;
+    padding: 12px 16px;
+    /* margin: 0; */
+    height: 67px;
     width:100%;
+    box-sizing: border-box;
+}
+.eval-asg-detil, .eval-mid-detil, .eval-fin-detil {
+    border-bottom: 0;
 }
 .eval-asg-detil-header,
 .eval-mid-detil-header,
 .eval-fin-detil-header 
 {
     font-size: 14px;
+}
+.eval-asg-detil-header td,
+.eval-mid-detil-header td,
+.eval-fin-detil-header td
+{
+    border-bottom: 0;
+    border-top: 1px solid #ddd !important;
 }
 .eval-asg-detil div,
 .eval-mid-detil div, 
@@ -279,4 +296,11 @@ button {
     background: orange;
     margin-left:0;
     display:block;
+}
+.p16 {
+    padding: 12px 16px;
+}
+.p16.w100pct {
+    box-sizing: border-box;
+    width: 100%;
 }
