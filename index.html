@@ -811,13 +811,15 @@
                                 </table>
                                 </td>`;     
 
-                    subTotalWeighted = Math.round(subTotalWeighted);
+                    // subTotalWeighted = Math.round(subTotalWeighted);
+                    // subTotalWeighted = subTotalWeighted;
                     totalWeighted += subTotalWeighted;
 
-                    subTotal = Math.floor(subTotalWeighted / asmtAct.weight);
+                    // subTotal = Math.floor(subTotalWeighted / asmtAct.weight);
+                    subTotal = subTotalWeighted / asmtAct.weight;
 
-                    rowStr = rowStr.replace('{subTotalWeighted}', subTotalWeighted);
-                    rowStr = rowStr.replace(/{subTotal}/gi, subTotal);
+                    rowStr = rowStr.replace('{subTotalWeighted}', Math.floor(subTotalWeighted * 100) / 100);
+                    rowStr = rowStr.replace(/{subTotal}/gi, Math.floor(subTotal * 100) / 100);
 
                     if (subTotal == 0) {
                         rowStr = rowStr.replace('{info}', '<small class="info"><span class="mark1">&bull;</span> Not submitted</small>');
