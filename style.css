@@ -304,3 +304,15 @@ button {
     box-sizing: border-box;
     width: 100%;
 }
+
+@media print {
+    .sidebar, .eval-asg-detil-header, .toggle-details, .aol, .detil-act-info, .bottom-sticky {
+      display: none !important;
+    }
+    .bordered {
+        max-height: auto !important;
+    }
+    .wrapper {
+        width: 100% !important;
+    }
+  }
