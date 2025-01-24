@@ -306,7 +306,9 @@ button {
 }
 
 @media print {
-    .sidebar, .eval-asg-detil-header, .toggle-details, .aol, .detil-act-info, .bottom-sticky {
+    .sidebar, .eval-asg-detil-header, 
+    .toggle-details, .aol, .detil-act-info, 
+    .bottom-sticky, .w100pct, .p16 {
       display: none !important;
     }
     .bordered {
